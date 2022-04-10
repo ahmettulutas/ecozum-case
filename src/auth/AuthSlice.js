@@ -18,7 +18,10 @@ const authSlice = createSlice({
     name: "auth",
     initialState: {
         isLoggedIn:true,
-        user: {},
+        user: {
+            fullName: "{name, surname}",
+            email: "",
+        },
         error: false,
         isPending:false,
         errorMessage: "",

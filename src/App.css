@@ -3,10 +3,22 @@
   padding:0;
   margin:0;
 }
-.login-form-container {
-  background-color:white;
-  border-radius:"25px";
-  border:'6px solid black';
+:root {
+  --gray: #F2F2F2;
+  --pane-padding: 5px 42px;
+}
+.route-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:var(--gray);
+  padding:2rem;
+}
+.loginform-container {
+  padding:1rem;
+  background-color:var(--gray);
+  min-height:100vh;
 }
 .login-form {
   margin:"1rem 1rem";

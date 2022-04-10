@@ -3,9 +3,9 @@ import { Form, Input, Button, Row, Col } from 'antd';
 import { UserOutlined, MailOutlined  } from '@ant-design/icons';
 import "antd/dist/antd.css";
 import { useSelector } from 'react-redux';
-import { selectAuth } from './auth/AuthSlice';
+import { selectAuth } from './AuthSlice';
 import { Navigate } from 'react-router-dom';
-
+import "./login.css";
 export default function NormalLoginForm () {
     const {error} = useSelector(selectAuth);
     const {isLoggedIn} = useSelector(selectAuth);
@@ -16,7 +16,7 @@ export default function NormalLoginForm () {
         return <Navigate to="/"/>
         }
     return (
-        <Row type="flex" justify="center" align="middle" style={{padding:"1rem", backgroundColor:"#F2F2F2", minHeight:'100vh'}}>
+        <Row type="flex" justify="center" align="middle" className="loginform-container">
             <Col style={{borderRadius:'15px', backgroundColor:"white", padding:"2rem", boxShadow:"3px 4px 5px 0px lightGray"}} s={{span:18}} md={{span:10}} lg={{span:6}}>
                 <Form
                     validateStatus={error ? "error" : "success"}
