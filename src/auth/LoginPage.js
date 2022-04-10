@@ -6,6 +6,7 @@ import { useSelector } from 'react-redux';
 import { selectAuth } from './AuthSlice';
 import { Navigate } from 'react-router-dom';
 import "./login.css";
+
 export default function NormalLoginForm () {
     const {error} = useSelector(selectAuth);
     const {isLoggedIn} = useSelector(selectAuth);
@@ -30,7 +31,7 @@ export default function NormalLoginForm () {
                     onFinish={onFinish}
                     >
                     <Form.Item
-                        label="Full name"                       
+                        label="Adınız Soyadınız"                       
                         name="fullName"
                         rules={[
                             {   
@@ -42,7 +43,7 @@ export default function NormalLoginForm () {
                         <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="full name" />
                     </Form.Item>
                     <Form.Item
-                        label="Email"
+                        label="Email Adresiniz"
                         name="email"
                         rules={[
                             {
@@ -56,7 +57,7 @@ export default function NormalLoginForm () {
                     </Form.Item>
                     <Form.Item>
                         <Button type="primary" htmlType="submit" className="login-form-button">
-                            Log in
+                            Devam Et
                         </Button>
                     </Form.Item>
                 </Form>

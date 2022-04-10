@@ -3,7 +3,8 @@ import 'antd/dist/antd.css';
 import { Modal } from 'antd';
 import { useSelector } from 'react-redux';
 import {selectProducts} from './ProductsSlice';
-import {CheckOutlined } from '@ant-design/icons';
+import {CheckCircleOutlined } from '@ant-design/icons';
+
 export default function SuccessComponent ()  {
   const {paymentBool} = useSelector(selectProducts);
   useEffect(() => {
@@ -13,14 +14,15 @@ export default function SuccessComponent ()  {
   return (
     <>
       <Modal
-        title="Ödeme Başarılı"
         centered
         visible={visible}
         onOk={() => setVisible(false)}
         onCancel={() => setVisible(false)}
+        footer={null}
       >
-        <div style={{display:"flex", alignItems:"cente", justifyContent:"center"}}>
-          <CheckOutlined style={{margin:"auto",fontSize:"50px", color:"green"}} />
+        <div style={{flexDirection:"column", display:"flex", alignItems:"center", justifyContent:"center"}}>
+          <CheckCircleOutlined style={{margin:"auto",fontSize:"150px", color:"green"}} />
+          <h1>Başarıyla Tamamlandı!</h1>
         </div>
       </Modal>
     </>
