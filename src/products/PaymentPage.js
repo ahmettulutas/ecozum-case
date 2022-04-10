@@ -114,7 +114,7 @@ export default function PaymentPage() {
                     <h3>Sözleşme</h3>
                 </Col>
                 <Col style={{padding:'1rem', overflow:"scroll", maxHeight:'30vh', borderRadius:'5px', border:'1px solid gray'}}>
-                    {agreementForm}
+                    <div dangerouslySetInnerHTML={{_html:agreementForm}}></div>
                 </Col>
             </Col>
             <Col className="common-container" xs={24} md={10} lg={5}>
