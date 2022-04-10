@@ -12,7 +12,7 @@ const dateConverter = (date) => {
     return moment(date).format('MM/YY');
 }
 export default function PaymentPage() {
-    const [agreementForm, setAgreementForm] = useState(false);
+    const [agreementForm, setAgreementForm] = useState("<p>test</p>");
     useEffect(() => {
         axios.get("https://6249a1e8fd7e30c51c042ccb.mockapi.io/api/payment").then(res => {
             setAgreementForm(res.data);

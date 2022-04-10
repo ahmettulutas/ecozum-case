@@ -50,7 +50,7 @@ const productsSlice = createSlice({
         errorMessage: "",
         cart: [],
         totalAmount: 0,
-        paymentBool:true,
+        paymentBool:false,
     },
     reducers: {
         addToCart: (state, action) => {

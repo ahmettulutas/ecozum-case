@@ -7,8 +7,8 @@ import ProductsPage from './products/ProductsPage';
 import PaymentPage from './products/PaymentPage';
 import ProtectedRouter from './ProtectedRouter';
 import HeaderComponent from './HeaderComponent';
-
 import {selectAuth} from './auth/AuthSlice';
+
 function App() {
   const {isLoggedIn} = useSelector(selectAuth);
   useEffect(() => {
