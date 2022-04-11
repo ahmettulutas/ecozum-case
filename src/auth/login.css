@@ -1,0 +1,19 @@
+.loginform-container {
+    padding:1rem;
+    background-color:var(--gray);
+    min-height:100vh;
+  }
+  .login-form {
+    margin:"1rem 1rem";
+    height:auto;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+  }
+  .login-input {
+    padding:"15px";
+  }
+  .login-form-button {
+    width: 100%;
+    border-radius:  '15px';
+  }

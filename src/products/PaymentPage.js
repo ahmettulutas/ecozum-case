@@ -12,7 +12,7 @@ const dateConverter = (date) => {
     return moment(date).format('MM/YY');
 }
 export default function PaymentPage() {
-    const [agreementForm, setAgreementForm] = useState("<p>test</p>");
+    const [agreementForm, setAgreementForm] = useState("<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sollicitudin ante sapien, in lacinia eros tincidunt ac. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla malesuada finibus arcu, pretium pulvinar ante mattis ut.</p>");
     useEffect(() => {
         axios.get("https://6249a1e8fd7e30c51c042ccb.mockapi.io/api/payment").then(res => {
             setAgreementForm(res.data);
@@ -114,7 +114,7 @@ export default function PaymentPage() {
                     <h3>Sözleşme</h3>
                 </Col>
                 <Col style={{padding:'1rem', overflow:"scroll", maxHeight:'30vh', borderRadius:'5px', border:'1px solid gray'}}>
-                    <div dangerouslySetInnerHTML={{_html:agreementForm}}></div>
+                    <div dangerouslySetInnerHTML={{__html:agreementForm}}></div>
                 </Col>
             </Col>
             <Col className="common-container" xs={24} md={10} lg={5}>

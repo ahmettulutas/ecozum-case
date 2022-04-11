@@ -9,7 +9,7 @@ export default function ProtectedRouter({children}) {
     useEffect(() => {
 
     }, [isLoggedIn]);
-
+    
     if(!isLoggedIn)
     {
         return <Navigate to="/login" state={{ from: location }} replace/>

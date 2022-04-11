@@ -1,6 +1,6 @@
 import React , {useEffect} from 'react';
 import { Button, Col, Row, Tag } from 'antd';
-import './products&payment.css'
+import './products&payment.css';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
 import { selectProducts, getProducts, addToCart } from './ProductsSlice';
